@@ -9,9 +9,8 @@ import UIKit
 
 class AppTabBarController: UITabBarController {
 
-//    var coordinator: Coordinator
-
     private var controllers: [UIViewController] = []
+    private var coordinators = [Coordinator]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +22,19 @@ class AppTabBarController: UITabBarController {
     }
 
     private func setupControllers() {
-        let dashboard = DashboardViewController()
-        let explore = ExploreTableViewController(dataProvider: MockDataProvider())
-        let exploreNavController = UINavigationController(rootViewController: explore)
-        exploreNavController.isNavigationBarHidden = true
 
-        controllers.append(dashboard)
-        controllers.append(exploreNavController)
+        let dashboardNavigationController = UINavigationController()
+        let dashboardCoordinator = DashboardCoordinator(navigationController: dashboardNavigationController)
+        dashboardCoordinator.start()
+
+        let exploreNavigationController = UINavigationController()
+        let exploreCoordinator = ExploreCoordinator(navigationController: exploreNavigationController)
+        exploreCoordinator.start()
+
+        controllers.append(dashboardNavigationController)
+        controllers.append(exploreNavigationController)
+
+        coordinators.append(dashboardCoordinator)
+        coordinators.append(exploreCoordinator)
     }
 }

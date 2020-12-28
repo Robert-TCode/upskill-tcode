@@ -20,6 +20,7 @@ struct TopicCategory: Decodable {
 
 class ExploreTableViewController: UITableViewController {
 
+    weak var coordinator: Coordinator?
     let dataProvider: DataProviding!
 
     private var topicCategories: [TopicCategory] = []

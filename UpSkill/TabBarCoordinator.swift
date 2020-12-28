@@ -24,7 +24,6 @@ class AppTabBarCoordinator: Coordinator {
 
     func start() {
         let tabBarCoordinator = AppTabBarController()
-//        tabBarCoordinator.coordinator = self
         navigationController.pushViewController(tabBarCoordinator, animated: false)
     }
 }
