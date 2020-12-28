@@ -1,4 +1,4 @@
 osx_image: xcode12.0
 language: swift
 script:
-- fastlane scan --scheme "UpSKill"
+- fastlane scan --scheme "UpSkill"

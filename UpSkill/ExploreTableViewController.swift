@@ -43,13 +43,19 @@ class ExploreTableViewController: UITableViewController {
     }
 
     private func loadTableData() {
-        dataProvider.getTopicCategories { [weak self] (categories) in
+        dataProvider.getTopicCategories { [weak self] result in
             guard let self = self else {
                 return
             }
 
-            self.topicCategories = categories
-            self.tableView.reloadData()
+            switch result {
+            case .success(let categories):
+                self.topicCategories = categories
+                self.tableView.reloadData()
+            case .failure(let error):
+                // localize error
+                print(error)
+            }
         }
     }
 

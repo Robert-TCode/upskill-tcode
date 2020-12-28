@@ -13,7 +13,9 @@
 		AAB8A9072598FCA600A0E20E /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */; };
 		AAB8A90F2598FF9A00A0E20E /* TopicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */; };
 		AAB8A930259A4CA000A0E20E /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = AAB8A92F259A4CA000A0E20E /* topics.json */; };
-		AAB8A935259A4CC600A0E20E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A934259A4CC600A0E20E /* DataProvider.swift */; };
+		AAB8A935259A4CC600A0E20E /* DataProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A934259A4CC600A0E20E /* DataProviding.swift */; };
+		AAB8A93A259A829C00A0E20E /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A939259A829C00A0E20E /* MockDataProvider.swift */; };
+		AAB8A942259A82C300A0E20E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A941259A82C300A0E20E /* DataProvider.swift */; };
 		AAC994D02594FA8800532095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994CF2594FA8800532095 /* AppDelegate.swift */; };
 		AAC994D22594FA8800532095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D12594FA8800532095 /* SceneDelegate.swift */; };
 		AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D32594FA8800532095 /* DashboardViewController.swift */; };
@@ -48,7 +50,9 @@
 		AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailsViewController.swift; sourceTree = "<group>"; };
 		AAB8A92F259A4CA000A0E20E /* topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topics.json; sourceTree = "<group>"; };
-		AAB8A934259A4CC600A0E20E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		AAB8A934259A4CC600A0E20E /* DataProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviding.swift; sourceTree = "<group>"; };
+		AAB8A939259A829C00A0E20E /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
+		AAB8A941259A82C300A0E20E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		AAC994CC2594FA8800532095 /* UpSkill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpSkill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC994CF2594FA8800532095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC994D12594FA8800532095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				AAB8A929259A4C6B00A0E20E /* Mocks */,
-				AAB8A934259A4CC600A0E20E /* DataProvider.swift */,
+				AAB8A934259A4CC600A0E20E /* DataProviding.swift */,
+				AAB8A941259A82C300A0E20E /* DataProvider.swift */,
+				AAB8A939259A829C00A0E20E /* MockDataProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -346,11 +352,13 @@
 			files = (
 				AAB8A8F42598F56500A0E20E /* AppCoordinator.swift in Sources */,
 				AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */,
-				AAB8A935259A4CC600A0E20E /* DataProvider.swift in Sources */,
+				AAB8A942259A82C300A0E20E /* DataProvider.swift in Sources */,
+				AAB8A935259A4CC600A0E20E /* DataProviding.swift in Sources */,
 				AAB8A9072598FCA600A0E20E /* ExploreTableViewController.swift in Sources */,
 				AAB8A90F2598FF9A00A0E20E /* TopicDetailsViewController.swift in Sources */,
 				AAC994D02594FA8800532095 /* AppDelegate.swift in Sources */,
 				AAB8A8F92598F5BE00A0E20E /* AppTabBarController.swift in Sources */,
+				AAB8A93A259A829C00A0E20E /* MockDataProvider.swift in Sources */,
 				AAC994D22594FA8800532095 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
