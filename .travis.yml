@@ -1,0 +1,6 @@
+osx_image: xcode12.0
+language: swift
+os: osx
+xcode_project: UpSkill.xcodeproj
+xcode_scheme: UpSkill
+xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11
