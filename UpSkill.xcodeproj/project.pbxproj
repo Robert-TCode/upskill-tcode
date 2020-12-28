@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB8A8D12598DA5D00A0E20E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A8D02598DA5D00A0E20E /* SnapshotHelper.swift */; };
+		AAB8A8F42598F56500A0E20E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A8F32598F56500A0E20E /* AppCoordinator.swift */; };
+		AAB8A8F92598F5BE00A0E20E /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */; };
+		AAB8A9072598FCA600A0E20E /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */; };
+		AAB8A90F2598FF9A00A0E20E /* TopicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */; };
 		AAC994D02594FA8800532095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994CF2594FA8800532095 /* AppDelegate.swift */; };
 		AAC994D22594FA8800532095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D12594FA8800532095 /* SceneDelegate.swift */; };
-		AAC994D42594FA8800532095 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D32594FA8800532095 /* ViewController.swift */; };
+		AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D32594FA8800532095 /* DashboardViewController.swift */; };
 		AAC994D72594FA8800532095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC994D52594FA8800532095 /* Main.storyboard */; };
 		AAC994D92594FA8900532095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC994D82594FA8900532095 /* Assets.xcassets */; };
 		AAC994DC2594FA8900532095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC994DA2594FA8900532095 /* LaunchScreen.storyboard */; };
@@ -35,10 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AAB8A8D02598DA5D00A0E20E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		AAB8A8F32598F56500A0E20E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
+		AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailsViewController.swift; sourceTree = "<group>"; };
 		AAC994CC2594FA8800532095 /* UpSkill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpSkill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC994CF2594FA8800532095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC994D12594FA8800532095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AAC994D32594FA8800532095 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAC994D32594FA8800532095 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		AAC994D62594FA8800532095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAC994D82594FA8900532095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC994DB2594FA8900532095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +86,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAB8A9162599007900A0E20E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAC994D82594FA8900532095 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AAB8A9172599008700A0E20E /* CoreFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AAC994DA2594FA8900532095 /* LaunchScreen.storyboard */,
+				AAC994D52594FA8800532095 /* Main.storyboard */,
+			);
+			path = CoreFiles;
+			sourceTree = "<group>";
+		};
+		AAB8A921259900BA00A0E20E /* ApplicationDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				AAC994CF2594FA8800532095 /* AppDelegate.swift */,
+				AAC994D12594FA8800532095 /* SceneDelegate.swift */,
+			);
+			path = ApplicationDelegates;
+			sourceTree = "<group>";
+		};
 		AAC994C32594FA8800532095 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +135,15 @@
 		AAC994CE2594FA8800532095 /* UpSkill */ = {
 			isa = PBXGroup;
 			children = (
-				AAC994CF2594FA8800532095 /* AppDelegate.swift */,
-				AAC994D12594FA8800532095 /* SceneDelegate.swift */,
-				AAC994D32594FA8800532095 /* ViewController.swift */,
-				AAC994D52594FA8800532095 /* Main.storyboard */,
-				AAC994D82594FA8900532095 /* Assets.xcassets */,
-				AAC994DA2594FA8900532095 /* LaunchScreen.storyboard */,
+				AAB8A921259900BA00A0E20E /* ApplicationDelegates */,
 				AAC994DD2594FA8900532095 /* Info.plist */,
+				AAB8A9162599007900A0E20E /* Resources */,
+				AAB8A9172599008700A0E20E /* CoreFiles */,
+				AAB8A8F32598F56500A0E20E /* AppCoordinator.swift */,
+				AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */,
+				AAC994D32594FA8800532095 /* DashboardViewController.swift */,
+				AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */,
+				AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */,
 			);
 			path = UpSkill;
 			sourceTree = "<group>";
@@ -123,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC994F12594FA8900532095 /* UpSkillUITests.swift */,
+				AAB8A8D02598DA5D00A0E20E /* SnapshotHelper.swift */,
 				AAC994F32594FA8900532095 /* Info.plist */,
 			);
 			path = UpSkillUITests;
@@ -138,6 +177,7 @@
 				AAC994C82594FA8800532095 /* Sources */,
 				AAC994C92594FA8800532095 /* Frameworks */,
 				AAC994CA2594FA8800532095 /* Resources */,
+				AAC995022594FBAC00532095 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -195,13 +235,16 @@
 				TargetAttributes = {
 					AAC994CB2594FA8800532095 = {
 						CreatedOnToolsVersion = 12.0;
+						ProvisioningStyle = Automatic;
 					};
 					AAC994E12594FA8900532095 = {
 						CreatedOnToolsVersion = 12.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = AAC994CB2594FA8800532095;
 					};
 					AAC994EC2594FA8900532095 = {
 						CreatedOnToolsVersion = 12.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = AAC994CB2594FA8800532095;
 					};
 				};
@@ -253,13 +296,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AAC995022594FBAC00532095 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nif which swiftlint >/dev/null; then\nswiftlint --config \"$SRCROOT/swiftlint.yml\" --strict\n# Here --strict is not really working. it should raise the warning before compiling\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAC994C82594FA8800532095 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC994D42594FA8800532095 /* ViewController.swift in Sources */,
+				AAB8A8F42598F56500A0E20E /* AppCoordinator.swift in Sources */,
+				AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */,
+				AAB8A9072598FCA600A0E20E /* ExploreTableViewController.swift in Sources */,
+				AAB8A90F2598FF9A00A0E20E /* TopicDetailsViewController.swift in Sources */,
 				AAC994D02594FA8800532095 /* AppDelegate.swift in Sources */,
+				AAB8A8F92598F5BE00A0E20E /* AppTabBarController.swift in Sources */,
 				AAC994D22594FA8800532095 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC994F22594FA8900532095 /* UpSkillUITests.swift in Sources */,
+				AAB8A8D12598DA5D00A0E20E /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,16 +505,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25258ALHUD;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tcode.upskill.one.UpSkill;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tcode.upskill.one.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -456,16 +526,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25258ALHUD;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tcode.upskill.one.UpSkill;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tcode.upskill.one.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
