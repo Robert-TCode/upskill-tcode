@@ -1,4 +1,4 @@
 scheme("UpSkill")
-open_report(true)
+open_report(false)
 clean(true)
 skip_build(true)
