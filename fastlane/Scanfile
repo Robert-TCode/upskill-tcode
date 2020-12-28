@@ -1,0 +1,4 @@
+scheme("UpSkill")
+open_report(true)
+clean(true)
+skip_build(true)

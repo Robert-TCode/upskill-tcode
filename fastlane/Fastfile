@@ -18,6 +18,11 @@ platform :ios do
     gym
   end
 
+  desc "Run all Unit and UI tests"
+  lane:scan do
+    scan
+  end
+
   desc "Upload to App Store"
   lane :upload do
     deliver
