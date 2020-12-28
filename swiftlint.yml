@@ -1,0 +1,14 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - UpSkill/ApplicationDelegates/*.swift
+  - UpSkillTests/*.swift
+  - UpSkillUITests/*.swift
+
+disabled_rules:
+  - trailing_whitespace
+
+# customised rules
+line_length:
+  warning: 160
+  error: 200
