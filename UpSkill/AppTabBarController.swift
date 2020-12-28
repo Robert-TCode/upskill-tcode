@@ -9,6 +9,8 @@ import UIKit
 
 class AppTabBarController: UITabBarController {
 
+//    var coordinator: Coordinator
+
     private var controllers: [UIViewController] = []
 
     override func viewDidLoad() {
