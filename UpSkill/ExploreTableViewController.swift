@@ -20,11 +20,12 @@ struct TopicCategory: Decodable {
 
 class ExploreTableViewController: UITableViewController {
 
-    let dataProvider: DataProviding = MockDataProvider()
+    let dataProvider: DataProviding!
 
     private var topicCategories: [TopicCategory] = []
 
-    init() {
+    init(dataProvider: DataProviding) {
+        self.dataProvider = dataProvider
         super.init(nibName: nil, bundle: nil)
 
         tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
@@ -33,6 +34,7 @@ class ExploreTableViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
+        loadTableData()
     }
 
     @available (*, unavailable)
@@ -85,19 +87,25 @@ class ExploreTableViewController: UITableViewController {
 
 extension ExploreTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        topicCategories.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        topicCategories[section].topics.count
     }
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         50
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        topicCategories[section].title
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel?.text = topicCategories[indexPath.section].topics[indexPath.row].title
+        return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

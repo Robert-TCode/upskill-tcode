@@ -22,7 +22,7 @@ class AppTabBarController: UITabBarController {
 
     private func setupControllers() {
         let dashboard = DashboardViewController()
-        let explore = ExploreTableViewController()
+        let explore = ExploreTableViewController(dataProvider: MockDataProvider())
         let exploreNavController = UINavigationController(rootViewController: explore)
         exploreNavController.isNavigationBarHidden = true
 
