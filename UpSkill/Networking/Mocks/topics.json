@@ -1,0 +1,27 @@
+[{
+	title: "Project Configuration",
+	isUI: false,
+	topics: [
+	{
+		title: "Linter",
+		description: "Linter is used for code style consistency and easier to understand and maintain codebases."
+	},
+	{
+		title: "Build scripts",
+		description: "Xcode offers the possibility to run user defined code as part of the build process using the "Run Script Phase" in the "Build Phases" section."
+	}]
+},
+{
+	title: "Software Architecture",
+	isUI: false,
+	topics: [
+	{
+		title: "SOLID",
+		description: "SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin"
+	},
+	{
+		title: "Coordinators Pattern",
+		description: "Using the coordinator pattern in iOS apps lets us remove the job of app navigation from our view controllers, helping make them more manageable and more reusable, while also letting us adjust our app's flow whenever we need."
+	}]
+	
+}]

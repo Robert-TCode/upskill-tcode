@@ -9,17 +9,20 @@ import UIKit
 
 struct Topic: Decodable {
     var title: String
-    var category: TopicCategory
     var description: String
 }
 
 struct TopicCategory: Decodable {
     var title: String
     var isUI: Bool
-    var topicNumber: Int
+    var topics: [Topic]
 }
 
 class ExploreTableViewController: UITableViewController {
+
+    let dataProvider: DataProviding = MockDataProvider()
+
+    private var topicCategories: [TopicCategory] = []
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +32,7 @@ class ExploreTableViewController: UITableViewController {
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
+
     }
 
     @available (*, unavailable)
@@ -36,7 +40,16 @@ class ExploreTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private var topics: [Topic] = []
+    private func loadTableData() {
+        dataProvider.getTopicCategories { [weak self] (categories) in
+            guard let self = self else {
+                return
+            }
+
+            self.topicCategories = categories
+            self.tableView.reloadData()
+        }
+    }
 
     // Project configuration
 

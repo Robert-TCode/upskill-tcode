@@ -12,6 +12,8 @@
 		AAB8A8F92598F5BE00A0E20E /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */; };
 		AAB8A9072598FCA600A0E20E /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */; };
 		AAB8A90F2598FF9A00A0E20E /* TopicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */; };
+		AAB8A930259A4CA000A0E20E /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = AAB8A92F259A4CA000A0E20E /* topics.json */; };
+		AAB8A935259A4CC600A0E20E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A934259A4CC600A0E20E /* DataProvider.swift */; };
 		AAC994D02594FA8800532095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994CF2594FA8800532095 /* AppDelegate.swift */; };
 		AAC994D22594FA8800532095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D12594FA8800532095 /* SceneDelegate.swift */; };
 		AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC994D32594FA8800532095 /* DashboardViewController.swift */; };
@@ -45,6 +47,8 @@
 		AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailsViewController.swift; sourceTree = "<group>"; };
+		AAB8A92F259A4CA000A0E20E /* topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topics.json; sourceTree = "<group>"; };
+		AAB8A934259A4CC600A0E20E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		AAC994CC2594FA8800532095 /* UpSkill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpSkill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC994CF2594FA8800532095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC994D12594FA8800532095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,23 @@
 			path = ApplicationDelegates;
 			sourceTree = "<group>";
 		};
+		AAB8A928259A4C5C00A0E20E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8A929259A4C6B00A0E20E /* Mocks */,
+				AAB8A934259A4CC600A0E20E /* DataProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AAB8A929259A4C6B00A0E20E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8A92F259A4CA000A0E20E /* topics.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		AAC994C32594FA8800532095 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +156,7 @@
 		AAC994CE2594FA8800532095 /* UpSkill */ = {
 			isa = PBXGroup;
 			children = (
+				AAB8A928259A4C5C00A0E20E /* Networking */,
 				AAB8A921259900BA00A0E20E /* ApplicationDelegates */,
 				AAC994DD2594FA8900532095 /* Info.plist */,
 				AAB8A9162599007900A0E20E /* Resources */,
@@ -275,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC994DC2594FA8900532095 /* LaunchScreen.storyboard in Resources */,
+				AAB8A930259A4CA000A0E20E /* topics.json in Resources */,
 				AAC994D92594FA8900532095 /* Assets.xcassets in Resources */,
 				AAC994D72594FA8800532095 /* Main.storyboard in Resources */,
 			);
@@ -323,6 +346,7 @@
 			files = (
 				AAB8A8F42598F56500A0E20E /* AppCoordinator.swift in Sources */,
 				AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */,
+				AAB8A935259A4CC600A0E20E /* DataProvider.swift in Sources */,
 				AAB8A9072598FCA600A0E20E /* ExploreTableViewController.swift in Sources */,
 				AAB8A90F2598FF9A00A0E20E /* TopicDetailsViewController.swift in Sources */,
 				AAC994D02594FA8800532095 /* AppDelegate.swift in Sources */,
