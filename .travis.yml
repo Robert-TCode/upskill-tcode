@@ -1,4 +1,4 @@
 osx_image: xcode12.0
 language: swift
 script:
-- fastlane scan --scheme "UpSkill" --device "iPhone 8 Plus" --clean
+- fastlane scan --scheme "UpSkill" -d 'platform=iOS Simulator,name=iPhone 8 Plus,OS=13.1'
