@@ -20,7 +20,7 @@ struct TopicCategory: Decodable {
 
 class ExploreTableViewController: UITableViewController {
 
-    weak var coordinator: Coordinator?
+    weak var coordinator: ExploreCoordinator?
     let dataProvider: DataProviding!
 
     private var topicCategories: [TopicCategory] = []
@@ -83,11 +83,6 @@ class ExploreTableViewController: UITableViewController {
     // Fastlane https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started
     // Build a pipeline
     // App circle or whatever CI/CD tolld
-
-    private func showTopicDetails() {
-        let topicDetailsViewController = TopicDetailsViewController()
-        navigationController?.pushViewController(topicDetailsViewController, animated: true)
-    }
 }
 
 // MARK: - TableViewDelegate and TableViewDatasource
@@ -116,6 +111,6 @@ extension ExploreTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showTopicDetails()
+        coordinator?.didSelectTopic(topicCategories[indexPath.section].topics[indexPath.row])
     }
 }

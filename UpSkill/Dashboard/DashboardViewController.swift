@@ -9,7 +9,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
-    weak var coordinator: Coordinator?
+    weak var coordinator: DashboardCoordinator?
     
     init() {
         super.init(nibName: nil, bundle: nil)

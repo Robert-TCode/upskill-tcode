@@ -145,6 +145,33 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		AAB8A970259A95E100A0E20E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */,
+				AAB8A946259A886800A0E20E /* TabBarCoordinator.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AAB8A971259A95F800A0E20E /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8A96B259A93BA00A0E20E /* ExploreCoordinator.swift */,
+				AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		AAB8A975259A960700A0E20E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8A966259A93A100A0E20E /* DashboardCoordinator.swift */,
+				AAC994D32594FA8800532095 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		AAC994C32594FA8800532095 = {
 			isa = PBXGroup;
 			children = (
@@ -174,12 +201,9 @@
 				AAB8A9162599007900A0E20E /* Resources */,
 				AAB8A9172599008700A0E20E /* CoreFiles */,
 				AAB8A8F32598F56500A0E20E /* AppCoordinator.swift */,
-				AAB8A946259A886800A0E20E /* TabBarCoordinator.swift */,
-				AAB8A8F82598F5BE00A0E20E /* AppTabBarController.swift */,
-				AAB8A96B259A93BA00A0E20E /* ExploreCoordinator.swift */,
-				AAB8A966259A93A100A0E20E /* DashboardCoordinator.swift */,
-				AAC994D32594FA8800532095 /* DashboardViewController.swift */,
-				AAB8A9062598FCA600A0E20E /* ExploreTableViewController.swift */,
+				AAB8A970259A95E100A0E20E /* TabBar */,
+				AAB8A971259A95F800A0E20E /* Explore */,
+				AAB8A975259A960700A0E20E /* Dashboard */,
 				AAB8A90E2598FF9A00A0E20E /* TopicDetailsViewController.swift */,
 			);
 			path = UpSkill;

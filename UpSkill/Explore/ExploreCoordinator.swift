@@ -24,4 +24,9 @@ class ExploreCoordinator: Coordinator {
         exploreTableViewController.coordinator = self
         navigationController.pushViewController(exploreTableViewController, animated: false)
     }
+
+    func didSelectTopic(_ topic: Topic) {
+        let topicDetailsViewController = TopicDetailsViewController()
+        navigationController.pushViewController(topicDetailsViewController, animated: true)
+    }
 }
