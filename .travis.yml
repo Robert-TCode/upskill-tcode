@@ -5,6 +5,5 @@ install:
 - ./install_swiftlint.sh
 
 script:
-- pod install
 - swiftlint
 - fastlane scan

@@ -58,11 +58,11 @@
     "topics": [
     {
         "title": "Fastlane",
-        "description": "fastlane is an open source platform aimed at simplifying Android and iOS deployment.\nfastlane lets you automate every aspect of your development and release workflow."
+        "description": "fastlane is an open source platform aimed at simplifying Android and iOS deployment.\nfastlane lets you automate every aspect of your development and release workflow. https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started"
     },
     {
         "title": "Travis CI",
-        "description": "Easy and free"
+        "description": "Easy and free. Build a pipeline!"
     },
     {
         "title": "CircleCI",

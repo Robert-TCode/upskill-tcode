@@ -59,30 +59,6 @@ class ExploreTableViewController: UITableViewController {
             }
         }
     }
-
-    // Project configuration
-
-    // Linter
-    // Build scripts
-    // xcconfig files + build config
-    // multiple scehees
-    // multiple targets
-
-    // App architecture
-
-    // Pods vs Carthage vs SPM
-    // Use swift SPM
-    // Multiple frameworks in an app
-    // App architecture design patterns
-    // Coordinators
-    // Service Locator + shared protocols
-    // MVVM and RxSwift
-
-    // CI + CD
-
-    // Fastlane https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started
-    // Build a pipeline
-    // App circle or whatever CI/CD tolld
 }
 
 // MARK: - TableViewDelegate and TableViewDatasource
