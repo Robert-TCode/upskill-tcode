@@ -239,6 +239,7 @@
 				AAC994C92594FA8800532095 /* Frameworks */,
 				AAC994CA2594FA8800532095 /* Resources */,
 				AAC995022594FBAC00532095 /* ShellScript */,
+				AAB8A98E259BACF300A0E20E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -359,6 +360,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		AAB8A98E259BACF300A0E20E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#xcrun xccov view Build/Logs/Test/*.xcresult/3_Test/action.xccovreport --json > coverage.json\n#coverage=`swift Parser.swift coverage.json`\n#echo $coverage\n#if [ $coverage -lt 70 ];\n#then\n#exit 1\n#else\n#exit 0\n#fi\n";
+		};
 		AAC995022594FBAC00532095 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
