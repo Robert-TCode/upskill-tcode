@@ -375,7 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#xcrun xccov view Build/Logs/Test/*.xcresult/3_Test/action.xccovreport --json > coverage.json\n#coverage=`swift Parser.swift coverage.json`\n#echo $coverage\n#if [ $coverage -lt 70 ];\n#then\n#exit 1\n#else\n#exit 0\n#fi\n";
+			shellScript = "# add coverage tests script\n#xcrun xccov view Build/Logs/Test/*.xcresult/3_Test/action.xccovreport --json > coverage.json\n#coverage=`swift Parser.swift coverage.json`\n#echo $coverage\n#if [ $coverage -lt 70 ];\n#then\n#exit 1\n#else\n#exit 0\n#fi\n";
 		};
 		AAC995022594FBAC00532095 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
