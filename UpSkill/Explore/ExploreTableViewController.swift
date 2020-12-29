@@ -70,7 +70,7 @@ class ExploreTableViewController: UITableViewController {
 
     // App architecture
 
-    // Pds vs Carthage vs SPM
+    // Pods vs Carthage vs SPM
     // Use swift SPM
     // Multiple frameworks in an app
     // App architecture design patterns

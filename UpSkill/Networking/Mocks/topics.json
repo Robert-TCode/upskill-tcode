@@ -9,7 +9,15 @@
 	{
 		"title": "Build scripts",
 		"description": "Xcode offers the possibility to run user defined code as part of the build process using the \"Run Script Phase\" in the \"Build Phases\" section."
-	}]
+	},
+    {
+        "title": "Multiple Schemes and Targets",
+        "description": "An Xcode project can have multiple schemes or targets."
+    },
+    {
+        "title": "Config files and build",
+        "description": "Learn more about xcconfig files and build config."
+    }]
 },
 {
 	"title": "Software Architecture",
@@ -22,5 +30,42 @@
 	{
 		"title": "Coordinators Pattern",
 		"description": "Using the coordinator pattern in iOS apps lets us remove the job of app navigation from our view controllers, helping make them more manageable and more reusable, while also letting us adjust our app's flow whenever we need."
-	}]
-}]
+	},
+    {
+        "title": "Dependencies",
+        "description": "Pods vs Carthage vs SPM"
+    },
+    {
+        "title": "Frameworks Extraction",
+        "description": "Extract modules of the app in different frameworks (Networking, UI, Database etc.)"
+    },
+    {
+        "title": "Design Patterns",
+        "description": "Software Design Patterns - Advantages and disadvantages"
+    },
+    {
+        "title": "Services, Locators and Shared Protocols",
+        "description": "Learn what they are, when and how to use them."
+    },
+    {
+        "title": "RMVVM + RxSwift",
+        "description": "Functional Reactive Programming. Get your hands dirty with this."
+    },]
+},
+{
+    "title": "CI + CD",
+    "isUI": false,
+    "topics": [
+    {
+        "title": "Fastlane",
+        "description": "fastlane is an open source platform aimed at simplifying Android and iOS deployment.\nfastlane lets you automate every aspect of your development and release workflow."
+    },
+    {
+        "title": "Travis CI",
+        "description": "Easy and free"
+    },
+    {
+        "title": "CircleCI",
+        "description": "You gotta pay for macOS environment"
+    }]
+},]
