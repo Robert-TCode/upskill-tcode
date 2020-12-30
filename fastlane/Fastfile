@@ -30,6 +30,7 @@ platform :ios do
 
   desc “Create app, take screenshots, build and upload to App Store"
   lane :build_and_deliver do
+    create_app
     screenshot
     build
     upload
