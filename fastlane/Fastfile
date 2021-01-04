@@ -43,7 +43,6 @@ platform :ios do
   desc "Update versioning and create .ipa file"
     lane :build do
     install_certificates
-#   enable_automatic_code_signing
 #   increment_version_number
     increment_build_number
     gym
@@ -61,7 +60,7 @@ platform :ios do
 
   desc "Take screenshots, build and upload to App Store"
   lane :build_and_deliver do
-#   screenshot
+    screenshot
     build
     upload
   end

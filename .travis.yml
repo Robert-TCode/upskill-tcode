@@ -24,7 +24,6 @@ script:
 # deploy app to App Store Connect
 deploy:
 - echo "machine github.com login $GITHUB_API_TOKEN" >> ~/.netrc
-#- fastlane build_and_deliver
 - provider: script
     script:
     - fastlane build_and_deliver
