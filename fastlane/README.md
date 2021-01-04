@@ -30,7 +30,7 @@ Take screenshots
 ```
 fastlane ios build
 ```
-Create ipa
+Update versioning and create .ipa file
 ### ios scan_app
 ```
 fastlane ios scan_app
@@ -45,7 +45,7 @@ Upload to App Store
 ```
 fastlane ios build_and_deliver
 ```
-Create app, take screenshots, build and upload to App Store
+Take screenshots, build and upload to App Store
 
 ----
 

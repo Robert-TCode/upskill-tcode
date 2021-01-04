@@ -1,9 +1,38 @@
+fastlane_require 'dotenv'
+
+before_all do
+  Dotenv.overload '.env.secret'
+end 
+
 default_platform(:ios)
 
+setup_travis
+
 platform :ios do
+
   desc "Create app on Apple Developer and App Store Connect sites"
   lane :create_app do
     produce
+  end
+
+  desc "Installs the certificates locally"
+  private_lane :install_certificates do
+    tmp_keychain = "temporary_keychain"
+
+    create_keychain(
+      name: tmp_keychain,
+      password: tmp_keychain,
+      default_keychain: true,
+      timeout: 3600,
+      unlock: true,
+    )
+
+    match(
+      type: "appstore",
+      keychain_name: tmp_keychain,
+      keychain_password: tmp_keychain,
+      readonly: true
+    )
   end
 
   desc "Take screenshots"
@@ -11,9 +40,11 @@ platform :ios do
     snapshot
   end
 
-  desc "Create ipa"
-  lane :build do
-    enable_automatic_code_signing
+  desc "Update versioning and create .ipa file"
+    lane :build do
+    install_certificates
+#   enable_automatic_code_signing
+#   increment_version_number
     increment_build_number
     gym
   end
@@ -28,10 +59,9 @@ platform :ios do
     deliver
   end
 
-  desc "Create app, take screenshots, build and upload to App Store"
+  desc "Take screenshots, build and upload to App Store"
   lane :build_and_deliver do
-    create_app
-    screenshot
+#   screenshot
     build
     upload
   end

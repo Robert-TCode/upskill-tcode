@@ -1,16 +1,34 @@
+# environment setup
 osx_image: xcode12
 language: swift
 
+# branch safelist
+branches:
+  only:
+    - main
+
+# install dependencies
 install:
 - ./install_swiftlint.sh
+- bundle install
 
+# scan app and check tests
 script:
 - swiftlint
-- bundle install
 - fastlane scan
-- fastlane build_and_deliver
-#- xcodebuild -scheme UpSkill -allowProvisioningUpdates -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
+- xcodebuild -scheme UpSkill -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
 
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)
+
+# deploy app to App Store Connect
+deploy:
+- echo "machine github.com login $GITHUB_API_TOKEN" >> ~/.netrc
+#- fastlane build_and_deliver
+- provider: script
+    script:
+    - fastlane build_and_deliver
+    on:
+      branch: main
+      # this should be releases/
 
