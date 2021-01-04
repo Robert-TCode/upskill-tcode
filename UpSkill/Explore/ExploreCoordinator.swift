@@ -26,7 +26,14 @@ class ExploreCoordinator: Coordinator {
     }
 
     func didSelectTopic(_ topic: Topic) {
-        let topicDetailsViewController = TopicDetailsViewController()
+        let topicViewModel = TopicViewModel(topic: topic)
+
+        let topicDetailsViewController = TopicDetailsViewController(topicViewModel: topicViewModel)
+        topicDetailsViewController.coordinator = self
         navigationController.pushViewController(topicDetailsViewController, animated: true)
+    }
+
+    func didSelectRefreshTopic() {
+        // refresh topic data
     }
 }

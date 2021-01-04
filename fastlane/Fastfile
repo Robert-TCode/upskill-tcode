@@ -19,7 +19,7 @@ platform :ios do
   end
 
   desc "Run all Unit and UI tests"
-  lane:scan do
+  lane:scan_app do
     scan
   end
 

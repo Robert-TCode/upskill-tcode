@@ -1,22 +1,6 @@
-//
-//  ExploreViewController.swift
-//  UpSkill
-//
 //  Created by TCode on 27/12/2020.
-//
 
 import UIKit
-
-struct Topic: Decodable {
-    var title: String
-    var description: String
-}
-
-struct TopicCategory: Decodable {
-    var title: String
-    var isUI: Bool
-    var topics: [Topic]
-}
 
 class ExploreTableViewController: UITableViewController {
 
