@@ -27,6 +27,7 @@ deploy:
 - provider: script
     script:
     - fastlane build_and_deliver
+    # add fastlane pilot for TestFlight
     on:
       branch: main
       # this should be releases/
