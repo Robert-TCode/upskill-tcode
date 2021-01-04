@@ -24,11 +24,11 @@ script:
 # deploy app to App Store Connect
 deploy:
 - echo "machine github.com login $GITHUB_API_TOKEN" >> ~/.netrc
-- provider: script
-    script:
-    - fastlane build_and_deliver
-    # add fastlane pilot for TestFlight
-    on:
-      branch: main
-      # this should be releases/
+#- provider: script
+#    script:
+#    - fastlane build_and_deliver
+#    # add fastlane pilot for TestFlight
+#    on:
+#      branch: main
+#      # this should be releases/
 
