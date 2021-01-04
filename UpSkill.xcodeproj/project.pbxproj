@@ -335,15 +335,18 @@
 				TargetAttributes = {
 					AAC994CB2594FA8800532095 = {
 						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 7BX4GQ2TK8;
 						ProvisioningStyle = Automatic;
 					};
 					AAC994E12594FA8900532095 = {
 						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 7BX4GQ2TK8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = AAC994CB2594FA8800532095;
 					};
 					AAC994EC2594FA8900532095 = {
 						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 7BX4GQ2TK8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = AAC994CB2594FA8800532095;
 					};
@@ -617,7 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -638,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -659,7 +662,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25258ALHUD;
+				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkillTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -681,7 +684,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25258ALHUD;
+				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkillTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -702,7 +705,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25258ALHUD;
+				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkillUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,7 +725,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25258ALHUD;
+				DEVELOPMENT_TEAM = 7BX4GQ2TK8;
 				INFOPLIST_FILE = UpSkillUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -31,14 +31,19 @@ Take screenshots
 fastlane ios build
 ```
 Create ipa
+### ios scan_app
+```
+fastlane ios scan_app
+```
+Run all Unit and UI tests
 ### ios upload
 ```
 fastlane ios upload
 ```
 Upload to App Store
-### ios do_everything
+### ios build_and_deliver
 ```
-fastlane ios do_everything
+fastlane ios build_and_deliver
 ```
 Create app, take screenshots, build and upload to App Store
 

@@ -3,7 +3,7 @@ default_platform(:ios)
 platform :ios do
   desc "Create app on Apple Developer and App Store Connect sites"
   lane :create_app do
-​    produce
+    produce
   end
 
   desc "Take screenshots"
@@ -28,7 +28,7 @@ platform :ios do
     deliver
   end
 
-  desc “Create app, take screenshots, build and upload to App Store"
+  desc "Create app, take screenshots, build and upload to App Store"
   lane :build_and_deliver do
     create_app
     screenshot

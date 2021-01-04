@@ -1,7 +1,7 @@
-scheme("UpSkill")
-output_directory("./fastlane/builds")
+scheme 'UpSkill'
+output_directory './fastlane/builds'
 include_bitcode(false)
 include_symbols(false)
 clean(true)
-silent(false)
-export_xcargs("-allowProvisioningUpdates")
+silent(true)
+export_xcargs '-allowProvisioningUpdates'
