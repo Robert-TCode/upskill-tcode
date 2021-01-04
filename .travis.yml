@@ -18,17 +18,13 @@ script:
 - fastlane scan
 - xcodebuild -scheme UpSkill -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
 
-#after_success:
-#  - bash <(curl -s https://codecov.io/bash)
-
 # deploy app to App Store Connect
-deploy:
+after_success:
+#- bash <(curl -s https://codecov.io/bash)
 - echo "machine github.com login $GITHUB_API_TOKEN" >> ~/.netrc
-#- provider: script
-#    script:
-#    - fastlane build_and_deliver
-#    # add fastlane pilot for TestFlight
-#    on:
-#      branch: main
-#      # this should be releases/
+- fastlane build_and_deliver
+# add fastlane pilot for TestFlight
+on:
+  branch: main
+  # this should be releases/
 
