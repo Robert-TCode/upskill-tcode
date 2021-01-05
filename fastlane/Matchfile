@@ -1,6 +1,6 @@
-git_url 'git@github.com:Robert-TCode/ios-certificates.git'
+git_url 'https://github.com/Robert-TCode/ios-certificates.git'
+git_basic_authorization 'Um9iZXJ0LVRDb2RlOjMxMzAxMWIyNjI3YWI2ODUyNDczZWYzY2ZiM2VkNGE5ZmU3YWM5NGM='
 storage_mode 'git'
 type 'appstore'
-
 app_identifier 'com.tcode.upskill.one.swift'
 username 'mobile@eumeo.io'

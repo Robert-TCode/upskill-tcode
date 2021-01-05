@@ -2,11 +2,6 @@
 osx_image: xcode12
 language: swift
 
-# branch safelist
-#branches:
-#  only:
-#    - main
-
 # install dependencies
 install:
 - ./install_swiftlint.sh
