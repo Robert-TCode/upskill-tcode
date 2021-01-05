@@ -41,6 +41,11 @@ Run all Unit and UI tests
 fastlane ios upload
 ```
 Upload to App Store
+### ios beta
+```
+fastlane ios beta
+```
+Upload to TestFlight
 ### ios build_and_deliver
 ```
 fastlane ios build_and_deliver
