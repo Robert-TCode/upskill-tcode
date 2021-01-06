@@ -85,9 +85,9 @@ desc "Upload to TestFlight"
 
   desc "Take screenshots, build and upload to App Store"
   lane :build_and_deliver do
-    screenshot
+#    screenshot
     build
-    beta
+#    beta
     upload
   end
 
