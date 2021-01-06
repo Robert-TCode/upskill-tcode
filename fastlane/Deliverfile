@@ -7,7 +7,7 @@ submission_information({
     add_id_info_uses_idfa: false
 })
 app_rating_config_path './fastlane/metadata/app_store_rating_config.json'
-ipa '/fastlane/builds/UpSkill.ipa'
+ipa './fastlane/builds/UpSkill.ipa'
 submit_for_review(false)
 automatic_release(false)
 force(true)

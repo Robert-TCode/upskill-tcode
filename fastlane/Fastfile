@@ -63,7 +63,6 @@ platform :ios do
       in_house: false
     )
     deliver(
-      ipa: "./fastlane/builds/UpSkill.ipa",
       precheck_include_in_app_purchases: false
     )
   end
