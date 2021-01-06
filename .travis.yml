@@ -5,7 +5,7 @@ language: swift
 # install dependencies
 install:
 - ./install_swiftlint.sh
-#- bundle install
+- bundle install
 #- bundle update fastlane
 
 # scan app and check tests
