@@ -86,7 +86,6 @@ desc "Upload to TestFlight"
     screenshot
     build
     beta
-    upload
   end
 
   desc "Upload to App Store"
