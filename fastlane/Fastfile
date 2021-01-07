@@ -62,9 +62,7 @@ platform :ios do
       duration: 1200, 
       in_house: false
     )
-    deliver(
-      precheck_include_in_app_purchases: false
-    )
+    deliver
   end
 
 desc "Upload to TestFlight"
@@ -83,12 +81,16 @@ desc "Upload to TestFlight"
     )
   end
 
-  desc "Take screenshots, build and upload to App Store"
-  lane :build_and_deliver do
-#    screenshot
+  desc "Take screenshots, build and upload to TestFlight"
+  lane :build_and_deliver_internally do
+    screenshot
     build
-#    beta
+    beta
     upload
   end
 
+  desc "Upload to App Store"
+  lane :upload_to_app_store do
+    upload
+  end
 end

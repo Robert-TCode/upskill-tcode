@@ -6,21 +6,22 @@ language: swift
 install:
 - ./install_swiftlint.sh
 - bundle install
-#- bundle update fastlane
+- bundle update fastlane
 
 # scan app and check tests
 script:
 - swiftlint
-#- fastlane scan
-#- xcodebuild -scheme UpSkill -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
+- fastlane scan
+- xcodebuild -scheme UpSkill -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
 
 # deploy app to Test Flight and App Store Connect
 after_success:
 #- bash <(curl -s https://codecov.io/bash)
-#- echo "machine github.com login $GITHUB_API_TOKEN" >> ~/.netrc
-- echo "app store key $APP_STORE_CONNECT_KEY_KEY"
-- fastlane build_and_deliver
-on:
-  branch: main
+- fastlane build_and_deliver_internally
+#on:
+#  branch: main
   # this should be releases/
+- if: branch == main
+  fastlane upload_to_app_store
+
 
