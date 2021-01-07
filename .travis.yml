@@ -21,7 +21,7 @@ after_success:
 #on:
 #  branch: main
   # this should be releases/
-- if: branch == main
-  fastlane upload_to_app_store
+- if [ branch == main ]; fastlane upload_to_app_store ; else echo 'Skipping App Store upload' ; fi
+
 
 
