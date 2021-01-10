@@ -46,11 +46,16 @@ Upload to App Store
 fastlane ios beta
 ```
 Upload to TestFlight
-### ios build_and_deliver
+### ios build_and_deliver_internally
 ```
-fastlane ios build_and_deliver
+fastlane ios build_and_deliver_internally
 ```
-Take screenshots, build and upload to App Store
+Take screenshots, build and upload to TestFlight
+### ios deliver_to_app_store
+```
+fastlane ios deliver_to_app_store
+```
+Upload to App Store
 
 ----
 

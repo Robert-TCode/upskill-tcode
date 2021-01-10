@@ -10,7 +10,6 @@ install:
 
 # scan app and check tests
 script:
-- if [ "$TRAVIS_BRANCH" = "main" ]; then echo 'You are on brack main'; else echo 'You are not on the main branch'; fi
 - swiftlint
 - fastlane scan
 - xcodebuild -scheme UpSkill -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
