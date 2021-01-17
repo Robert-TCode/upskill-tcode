@@ -1,9 +1,4 @@
-//
-//  ExploreCoordinator.swift
-//  UpSkill
-//
 //  Created by TCode on 28/12/2020.
-//
 
 import Foundation
 import UIKit
@@ -27,10 +22,11 @@ class ExploreCoordinator: Coordinator {
 
     func didSelectTopic(_ topic: Topic) {
         let topicViewModel = TopicViewModel(topic: topic)
-
-        let topicDetailsViewController = TopicDetailsViewController(topicViewModel: topicViewModel)
-        topicDetailsViewController.coordinator = self
-        navigationController.pushViewController(topicDetailsViewController, animated: true)
+        let topicDetailCoordinator = TopicDetailsCoordinator(navigationController: navigationController, topic: topicViewModel)
+        topicDetailCoordinator.start()
+//        let topicDetailsViewController = TopicDetailsViewController(topicViewModel: topicViewModel)
+//        topicDetailsViewController.coordinator = self
+//        navigationController.pushViewController(topicDetailsViewController, animated: true)
     }
 
     func didSelectRefreshTopic() {

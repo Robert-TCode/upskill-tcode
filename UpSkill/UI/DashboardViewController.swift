@@ -9,7 +9,6 @@ class DashboardViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
         view.backgroundColor = .white
     }
 

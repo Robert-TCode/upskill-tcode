@@ -9,9 +9,9 @@ import UIKit
 
 class TopicDetailsViewController: UIViewController {
 
-    weak var coordinator: ExploreCoordinator?
+    weak var coordinator: TopicDetailsCoordinator?
 
-    let topicViewModel: TopicViewModel!
+    let topicViewModel: TopicViewModel
 
     init(topicViewModel: TopicViewModel) {
         self.topicViewModel = topicViewModel

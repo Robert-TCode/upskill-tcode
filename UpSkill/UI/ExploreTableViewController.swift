@@ -13,7 +13,6 @@ class ExploreTableViewController: UITableViewController {
         self.dataProvider = dataProvider
         super.init(nibName: nil, bundle: nil)
 
-        tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         view.backgroundColor = .white
 
         self.tableView.delegate = self

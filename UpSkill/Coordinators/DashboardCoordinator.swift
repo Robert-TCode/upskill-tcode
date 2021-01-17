@@ -1,9 +1,4 @@
-//
-//  DashboardCoordinator.swift
-//  UpSkill
-//
 //  Created by TCode on 28/12/2020.
-//
 
 import Foundation
 import UIKit
@@ -22,5 +17,10 @@ class DashboardCoordinator: Coordinator {
         let dashboardViewController = DashboardViewController()
         dashboardViewController.coordinator = self
         navigationController.pushViewController(dashboardViewController, animated: false)
+    }
+
+    func topicDetails(_ topic: TopicViewModel) {
+        let topicDetailsCoordinator = TopicDetailsCoordinator(navigationController: navigationController, topic: topic)
+        topicDetailsCoordinator.start()
     }
 }

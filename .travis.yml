@@ -8,15 +8,13 @@ install:
 - bundle install
 - bundle update fastlane
 
-# scan app and check tests
+# scan app and run tests
 script:
 - swiftlint
 - fastlane scan
-- xcodebuild -scheme UpSkill -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.0' build test
 
-# deploy app to Test Flight and App Store Connect
+# deploy app to Test Flight and App Store Connect (if on branch main)
 after_success:
-#- bash <(curl -s https://codecov.io/bash)
 - fastlane build_and_deliver_internally
 - if [ "$TRAVIS_BRANCH" = "main" ]; then fastlane deliver_to_app_store; else echo 'Skipping App Store upload'; fi
 

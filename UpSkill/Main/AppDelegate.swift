@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  UpSkill
-//
 //  Created by TCode on 24/12/2020.
-//
 
 import UIKit
 

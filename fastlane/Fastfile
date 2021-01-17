@@ -43,7 +43,6 @@ platform :ios do
   desc "Update versioning and create .ipa file"
     lane :build do
     install_certificates
-#   increment_version_number
     increment_build_number
     gym
   end
@@ -90,6 +89,9 @@ desc "Upload to TestFlight"
 
   desc "Upload to App Store"
   lane :deliver_to_app_store do
+    install_certificates
+    increment_version_number
+    gym
     upload
   end
 end
