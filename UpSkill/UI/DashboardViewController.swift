@@ -4,7 +4,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
-    weak var coordinator: DashboardCoordinator?
+    var coordinator: DashboardCoordinator?
     
     init() {
         super.init(nibName: nil, bundle: nil)

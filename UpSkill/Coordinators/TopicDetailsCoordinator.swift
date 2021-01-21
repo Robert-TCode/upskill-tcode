@@ -4,6 +4,8 @@ import Foundation
 import UIKit
 
 class TopicDetailsCoordinator: Coordinator {
+    weak var parentCoordinator: ParentCoordinator?
+
     var navigationController: UINavigationController
     let topic: TopicViewModel
 
@@ -16,7 +18,11 @@ class TopicDetailsCoordinator: Coordinator {
         let topicDetailsController = TopicDetailsViewController(topicViewModel: topic)
         topicDetailsController.coordinator = self
 
-        navigationController.pushViewController(topicDetailsController, animated: true)
-//        navigationController.present(topicDetailsController, animated: true, completion: nil)
+//        navigationController.pushViewController(topicDetailsController, animated: true)
+        navigationController.present(topicDetailsController, animated: true, completion: nil)
+    }
+
+    func didFinish() {
+        parentCoordinator?.didFinishChild(self)
     }
 }

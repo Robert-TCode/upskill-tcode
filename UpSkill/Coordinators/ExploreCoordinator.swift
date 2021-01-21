@@ -3,13 +3,14 @@
 import Foundation
 import UIKit
 
-class ExploreCoordinator: Coordinator {
+class ExploreCoordinator: Coordinator, ParentCoordinator {
+    let databaseProvider: DataProviding
+
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
-    private var databaseProvider: DataProviding = MockDataProvider()
-
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, dataProvider: DataProviding) {
+        self.databaseProvider = dataProvider
         self.navigationController = navigationController
         self.navigationController.isNavigationBarHidden = true
     }
@@ -24,12 +25,8 @@ class ExploreCoordinator: Coordinator {
         let topicViewModel = TopicViewModel(topic: topic)
         let topicDetailCoordinator = TopicDetailsCoordinator(navigationController: navigationController, topic: topicViewModel)
         topicDetailCoordinator.start()
-//        let topicDetailsViewController = TopicDetailsViewController(topicViewModel: topicViewModel)
-//        topicDetailsViewController.coordinator = self
-//        navigationController.pushViewController(topicDetailsViewController, animated: true)
-    }
 
-    func didSelectRefreshTopic() {
-        // refresh topic data
+        childCoordinators.append(topicDetailCoordinator)
+        topicDetailCoordinator.parentCoordinator = self
     }
 }

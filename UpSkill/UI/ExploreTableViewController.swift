@@ -3,9 +3,9 @@
 import UIKit
 
 class ExploreTableViewController: UITableViewController {
+    let dataProvider: DataProviding
 
-    weak var coordinator: ExploreCoordinator?
-    let dataProvider: DataProviding!
+    var coordinator: ExploreCoordinator?
 
     private var topicCategories: [TopicCategory] = []
 

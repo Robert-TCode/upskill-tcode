@@ -1,9 +1,4 @@
-//
-//  TopicDetailsViewController.swift
-//  UpSkill
-//
 //  Created by TCode on 27/12/2020.
-//
 
 import UIKit
 
@@ -44,6 +39,11 @@ class TopicDetailsViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.didFinish()
+    }
+
     @available (*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -62,7 +62,6 @@ class TopicDetailsViewController: UIViewController {
     }()
 
     @objc private func refresh(_ sender: UIView) {
-//        coordinator?.didSelectRefreshTopic()
         ImageDownloader.downloadSwiftImage { image in
             self.topicViewModel.image.value = image
         }

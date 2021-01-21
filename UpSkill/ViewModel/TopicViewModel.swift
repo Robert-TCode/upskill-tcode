@@ -1,9 +1,4 @@
-//
-//  TopicViewModel.swift
-//  UpSkill
-//
 //  Created by TCode on 03/01/2021.
-//
 
 import Foundation
 import UIKit

@@ -5,7 +5,7 @@ import Foundation
 class Box<T> {
     typealias Listener = (T) -> Void
     private var listener: Listener?
-
+ 
     var value: T {
         didSet {
             listener?(value)

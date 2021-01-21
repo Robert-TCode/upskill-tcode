@@ -11,8 +11,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        coordinator = AppCoordinator(window: window!)
+        let databaseProvider: DataProviding = MockDataProvider()
+        let persistentContainer = getPersistentContainer()
+
+        coordinator = AppCoordinator(window: window!, databaseProvider: databaseProvider)
         coordinator?.start()
+    }
+
+    private func getPersistentContainer() -> PersistentContainer {
+        if isRunningUITests() {
+            return try! PersistentContainer.loadedInMemory()
+        } else {
+            return try! PersistentContainer.loadedSQL()
+        }
+    }
+
+    private func isRunningUnitTests() -> Bool {
+        let unitTests = ProcessInfo.processInfo.environment["XCTestBundlePath"]
+        let xcodeSchemeUnitTests = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"]
+        return unitTests == nil || xcodeSchemeUnitTests == nil
+    }
+
+    private func isRunningUITests() -> Bool {
+        let automationTests = ProcessInfo.processInfo.environment["RunningAutomationTests"]
+        return automationTests == nil
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }
