@@ -11,11 +11,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let databaseProvider: DataProviding = MockDataProvider()
-        let persistentContainer = getPersistentContainer()
+        registerPersistentContainer()
 
-        coordinator = AppCoordinator(window: window!, databaseProvider: databaseProvider)
+//        deleteDatabase()
+
+        coordinator = AppCoordinator(window: window!, apiClient: createAPIClient())
         coordinator?.start()
+    }
+
+    private func deleteDatabase() {
+        let topicContext = TopicContext()
+        topicContext.deleteAllTOpics()
+
+        let categoryContext = TopicCategoryContext()
+        categoryContext.deleteAllCategories()
+    }
+
+    private func registerPersistentContainer() {
+        let persistentContainer = getPersistentContainer()
+        ServiceRegistry.shared.register(service: persistentContainer, as: PersistentContainer.self)
+    }
+
+    private func createAPIClient() -> APIClientProtocol {
+        let persistentContainer: PersistentContainer = ServiceRegistry.shared.make(type: PersistentContainer.self)
+        let managedObjectContext = persistentContainer.viewContext
+        let decoder = JSONDecoder()
+        decoder.userInfo[CodingUserInfoKey.managedObjectContext] = managedObjectContext
+
+        let apiClient: APIClientProtocol = MockAPIClient()
+        return apiClient
     }
 
     private func getPersistentContainer() -> PersistentContainer {
@@ -29,12 +53,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func isRunningUnitTests() -> Bool {
         let unitTests = ProcessInfo.processInfo.environment["XCTestBundlePath"]
         let xcodeSchemeUnitTests = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"]
-        return unitTests == nil || xcodeSchemeUnitTests == nil
+        return unitTests != nil || xcodeSchemeUnitTests != nil
     }
 
     private func isRunningUITests() -> Bool {
         let automationTests = ProcessInfo.processInfo.environment["RunningAutomationTests"]
-        return automationTests == nil
+        return automationTests != nil
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

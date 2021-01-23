@@ -3,14 +3,14 @@
 import UIKit
 
 class ExploreTableViewController: UITableViewController {
-    let dataProvider: DataProviding
+    let apiClient: APIClientProtocol
 
     var coordinator: ExploreCoordinator?
 
     private var topicCategories: [TopicCategory] = []
 
-    init(dataProvider: DataProviding) {
-        self.dataProvider = dataProvider
+    init(apiClient: APIClientProtocol) {
+        self.apiClient = apiClient
         super.init(nibName: nil, bundle: nil)
 
         view.backgroundColor = .white
@@ -27,7 +27,11 @@ class ExploreTableViewController: UITableViewController {
     }
 
     private func loadTableData() {
-        dataProvider.getTopicCategories { [weak self] result in
+//        let context = TopicCategoryContext()
+//        self.topicCategories = context.fetchAllCategories()
+//        self.tableView.reloadData()
+
+        apiClient.getTopicCategories { [weak self] result in
             guard let self = self else {
                 return
             }
@@ -60,7 +64,7 @@ extension ExploreTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        topicCategories[section].title
+        topicCategories[section].name
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -5,7 +5,7 @@ import CoreData
 
 extension NSPersistentStoreDescription {
     public static var sql: NSPersistentStoreDescription {
-        guard let appGroupIdentifier = Bundle.main.infoDictionary?["AppGroupIdentifier"] as? String else {
+        guard let appGroupIdentifier = Bundle.main.infoDictionary?["APP_GROUP_IDENTIFIER"] as? String else {
             fatalError("AppGroupIdentifier string not found")
         }
         let appGroupURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier)!

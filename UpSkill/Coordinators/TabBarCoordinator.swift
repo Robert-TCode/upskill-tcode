@@ -4,14 +4,14 @@ import Foundation
 import UIKit
 
 public class TabBarCoordinator: Coordinator, ParentCoordinator {
-    let databaseProvider: DataProviding
+    let apiClient: APIClientProtocol
 
     var navigationController: UINavigationController
     var childCoordinators = [Coordinator]()
 
-    init(navigationController: UINavigationController, databaseProvider: DataProviding) {
+    init(navigationController: UINavigationController, apiClient: APIClientProtocol) {
         self.navigationController = navigationController
-        self.databaseProvider = databaseProvider
+        self.apiClient = apiClient
     }
 
     func start() {
@@ -24,7 +24,7 @@ public class TabBarCoordinator: Coordinator, ParentCoordinator {
 
         let exploreNavigationController = UINavigationController()
         exploreNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
-        let exploreCoordiantor = ExploreCoordinator(navigationController: exploreNavigationController, dataProvider: databaseProvider)
+        let exploreCoordiantor = ExploreCoordinator(navigationController: exploreNavigationController, apiClient: apiClient)
 
         tabBarController.viewControllers = [dashboardNavigationController,
                                             exploreNavigationController]

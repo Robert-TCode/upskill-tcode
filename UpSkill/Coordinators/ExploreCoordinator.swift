@@ -4,19 +4,19 @@ import Foundation
 import UIKit
 
 class ExploreCoordinator: Coordinator, ParentCoordinator {
-    let databaseProvider: DataProviding
+    let apiClient: APIClientProtocol
 
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
-    init(navigationController: UINavigationController, dataProvider: DataProviding) {
-        self.databaseProvider = dataProvider
+    init(navigationController: UINavigationController, apiClient: APIClientProtocol) {
+        self.apiClient = apiClient
         self.navigationController = navigationController
         self.navigationController.isNavigationBarHidden = true
     }
 
     func start() {
-        let exploreTableViewController = ExploreTableViewController(dataProvider: databaseProvider)
+        let exploreTableViewController = ExploreTableViewController(apiClient: apiClient)
         exploreTableViewController.coordinator = self
         navigationController.pushViewController(exploreTableViewController, animated: false)
     }

@@ -12,7 +12,7 @@ class TopicViewModel {
     }
 
     var title: String {
-        return topic.title
+        return topic.title ?? ""
     }
 
     var description: String {

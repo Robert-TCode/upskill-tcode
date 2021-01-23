@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Topic" representedClassName="Topic" syncable="YES">
+        <attribute name="difficulty" optional="YES" attributeType="String"/>
+        <attribute name="expPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="topicDescription" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicCategory" inverseName="topic" inverseEntity="TopicCategory"/>
+    </entity>
+    <entity name="TopicCategory" representedClassName="TopicCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="topic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Topic" inverseName="category" inverseEntity="Topic"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Topic" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="TopicCategory" positionX="-54" positionY="36" width="128" height="88"/>
+    </elements>
+</model>

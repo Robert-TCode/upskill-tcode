@@ -5,13 +5,13 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     let window: UIWindow
-    let databaseProvider: DataProviding
+    let apiClient: APIClientProtocol
 
     var navigationController: UINavigationController
     
-    init(window: UIWindow, databaseProvider: DataProviding) {
+    init(window: UIWindow, apiClient: APIClientProtocol) {
         self.window = window
-        self.databaseProvider = databaseProvider
+        self.apiClient = apiClient
         navigationController = UINavigationController()
     }
 
@@ -19,7 +19,7 @@ class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     
-        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, databaseProvider: databaseProvider)
+        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, apiClient: apiClient)
         tabBarCoordinator.start()
     }
 }

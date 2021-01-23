@@ -1,71 +1,113 @@
 [{
-	"title": "Project Configuration",
-	"isUI": false,
-	"topics": [
+	"name": "Project Configuration",
+	"type": "Setups and configs",
+	"topic": [
 	{
 		"title": "Linter",
-		"description": "Linter is used for code style consistency and easier to understand and maintain codebases."
+		"description": "Linter is used for code style consistency and easier to understand and maintain codebases.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
 	},
 	{
 		"title": "Build scripts",
-		"description": "Xcode offers the possibility to run user defined code as part of the build process using the \"Run Script Phase\" in the \"Build Phases\" section."
+		"description": "Xcode offers the possibility to run user defined code as part of the build process using the \"Run Script Phase\" in the \"Build Phases\" section.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
 	},
     {
         "title": "Multiple Schemes and Targets",
-        "description": "An Xcode project can have multiple schemes or targets."
+        "description": "An Xcode project can have multiple schemes or targets.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "Config files and build",
-        "description": "Learn more about xcconfig files and build config."
+        "description": "Learn more about xcconfig files and build config.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     }]
 },
 {
-	"title": "Software Architecture",
-	"isUI": false,
-	"topics": [
+	"name": "Software Architecture",
+    "type": "Software Architecture",
+	"topic": [
 	{
 		"title": "SOLID",
-		"description": "SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin"
+		"description": "SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
 	},
 	{
 		"title": "Coordinators Pattern",
-		"description": "Using the coordinator pattern in iOS apps lets us remove the job of app navigation from our view controllers, helping make them more manageable and more reusable, while also letting us adjust our app's flow whenever we need."
+		"description": "Using the coordinator pattern in iOS apps lets us remove the job of app navigation from our view controllers, helping make them more manageable and more reusable, while also letting us adjust our app's flow whenever we need.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
 	},
     {
         "title": "Dependencies",
-        "description": "Pods vs Carthage vs SPM"
+        "description": "Pods vs Carthage vs SPM",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "Frameworks Extraction",
-        "description": "Extract modules of the app in different frameworks (Networking, UI, Database etc.)"
+        "description": "Extract modules of the app in different frameworks (Networking, UI, Database etc.)",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "Design Patterns",
-        "description": "Software Design Patterns - Advantages and disadvantages"
+        "description": "Software Design Patterns - Advantages and disadvantages",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "Services, Locators and Shared Protocols",
-        "description": "Learn what they are, when and how to use them."
+        "description": "Learn what they are, when and how to use them.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "RMVVM + RxSwift",
-        "description": "Functional Reactive Programming. Get your hands dirty with this."
+        "description": "Functional Reactive Programming. Get your hands dirty with this.",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },]
 },
 {
-    "title": "CI + CD",
-    "isUI": false,
-    "topics": [
+    "name": "CI + CD",
+    "type": "Setups and configs",
+    "topic": [
     {
         "title": "Fastlane",
-        "description": "fastlane is an open source platform aimed at simplifying Android and iOS deployment.\nfastlane lets you automate every aspect of your development and release workflow. https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started"
+        "description": "fastlane is an open source platform aimed at simplifying Android and iOS deployment.\nfastlane lets you automate every aspect of your development and release workflow. https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "Travis CI",
-        "description": "Easy and free. Build a pipeline!"
+        "description": "Easy and free. Build a pipeline!",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     },
     {
         "title": "CircleCI",
-        "description": "You gotta pay for macOS environment"
+        "description": "You gotta pay for macOS environment",
+        "difficulty": "Junior",
+        "hours": 5,
+        "expPoints": 200
     }]
-},]
+}]
