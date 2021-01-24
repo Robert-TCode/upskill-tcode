@@ -16,7 +16,8 @@ script:
 # deploy app to Test Flight and App Store Connect (if on branch main)
 after_success:
 - fastlane build_and_deliver_internally
-- if [ "$TRAVIS_BRANCH" = "main" ]; then fastlane deliver_to_app_store; else echo 'Skipping App Store upload'; fi
-
+# Open a PR with the modified build number
+#- if [ "$TRAVIS_BRANCH" = "main" ]; then fastlane deliver_to_app_store; else echo 'Skipping App Store upload'; fi
+# Open a PR with the modified version and build number
 
 
