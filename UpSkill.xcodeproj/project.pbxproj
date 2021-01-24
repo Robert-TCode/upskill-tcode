@@ -21,6 +21,8 @@
 		AA3E84B125BC918D00C90C69 /* CodingUserInfoKey+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E84B025BC918D00C90C69 /* CodingUserInfoKey+Helpers.swift */; };
 		AA3E84B625BC966300C90C69 /* TopicCategoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E84B525BC966300C90C69 /* TopicCategoryContext.swift */; };
 		AA3E84BB25BC9A9300C90C69 /* ServiceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E84BA25BC9A9300C90C69 /* ServiceRegistry.swift */; };
+		AA3E84C725BDD45C00C90C69 /* StringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E84C625BDD45C00C90C69 /* StringError.swift */; };
+		AA3E84CD25BDD49600C90C69 /* APICategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E84CC25BDD49600C90C69 /* APICategories.swift */; };
 		AA78D2AD25B455A700B0B409 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78D2AC25B455A700B0B409 /* AppCoordinator.swift */; };
 		AAB8A8D12598DA5D00A0E20E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A8D02598DA5D00A0E20E /* SnapshotHelper.swift */; };
 		AAB8A8F42598F56500A0E20E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A8F32598F56500A0E20E /* Coordinator.swift */; };
@@ -80,6 +82,8 @@
 		AA3E84B525BC966300C90C69 /* TopicCategoryContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCategoryContext.swift; sourceTree = "<group>"; };
 		AA3E84BA25BC9A9300C90C69 /* ServiceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistry.swift; sourceTree = "<group>"; };
 		AA3E84BF25BCA9C600C90C69 /* UpSkill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UpSkill.entitlements; sourceTree = "<group>"; };
+		AA3E84C625BDD45C00C90C69 /* StringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringError.swift; sourceTree = "<group>"; };
+		AA3E84CC25BDD49600C90C69 /* APICategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICategories.swift; sourceTree = "<group>"; };
 		AA78D2AC25B455A700B0B409 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AAB8A8D02598DA5D00A0E20E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		AAB8A8F32598F56500A0E20E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -179,10 +183,8 @@
 				AABAA67A25A239490052CF0A /* Models */,
 				AA3E843E25BA344C00C90C69 /* Database.xcdatamodeld */,
 				AA3E844425BA354800C90C69 /* PersistentContainer.swift */,
-				AA3E847425BB8AA600C90C69 /* TopicContext.swift */,
-				AA3E84B525BC966300C90C69 /* TopicCategoryContext.swift */,
-				AA3E84AB25BC917300C90C69 /* DecoderConfigurationError.swift */,
-				AA3E84B025BC918D00C90C69 /* CodingUserInfoKey+Helpers.swift */,
+				AA3E84D825BDD50400C90C69 /* Contexts */,
+				AA3E84DC25BDD51200C90C69 /* Helpers */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -190,11 +192,47 @@
 		AA3E84A725BC911700C90C69 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				AAB8A934259A4CC600A0E20E /* APIClientProtocol.swift */,
 				AAB8A941259A82C300A0E20E /* APIClient.swift */,
 				AAB8A939259A829C00A0E20E /* MockAPIClient.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		AA3E84CB25BDD47600C90C69 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AABAA69A25A251500052CF0A /* ImageDowloader.swift */,
+				AA3E84A225BC90F800C90C69 /* Data+Helpers.swift */,
+				AA3E84C625BDD45C00C90C69 /* StringError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AA3E84D125BDD4E600C90C69 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AAB8A934259A4CC600A0E20E /* APIClientProtocol.swift */,
+				AA3E84CC25BDD49600C90C69 /* APICategories.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AA3E84D825BDD50400C90C69 /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				AA3E847425BB8AA600C90C69 /* TopicContext.swift */,
+				AA3E84B525BC966300C90C69 /* TopicCategoryContext.swift */,
+			);
+			path = Contexts;
+			sourceTree = "<group>";
+		};
+		AA3E84DC25BDD51200C90C69 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AA3E84AB25BC917300C90C69 /* DecoderConfigurationError.swift */,
+				AA3E84B025BC918D00C90C69 /* CodingUserInfoKey+Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AAB8A9162599007900A0E20E /* Resources */ = {
@@ -220,9 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				AAB8A929259A4C6B00A0E20E /* Mocks */,
+				AA3E84D125BDD4E600C90C69 /* Protocols */,
 				AA3E84A725BC911700C90C69 /* APIClient */,
-				AA3E84A225BC90F800C90C69 /* Data+Helpers.swift */,
-				AABAA69A25A251500052CF0A /* ImageDowloader.swift */,
+				AA3E84CB25BDD47600C90C69 /* Helpers */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -467,6 +505,7 @@
 				AA3E844D25BB872700C90C69 /* TopicCategory+CoreDataClass.swift in Sources */,
 				AAB8A8F42598F56500A0E20E /* Coordinator.swift in Sources */,
 				AAB8A967259A93A100A0E20E /* DashboardCoordinator.swift in Sources */,
+				AA3E84CD25BDD49600C90C69 /* APICategories.swift in Sources */,
 				AAC994D42594FA8800532095 /* DashboardViewController.swift in Sources */,
 				AAB8A942259A82C300A0E20E /* APIClient.swift in Sources */,
 				AABAA68F25A23E260052CF0A /* TopicViewModel.swift in Sources */,
@@ -477,6 +516,7 @@
 				AA3E847525BB8AA600C90C69 /* TopicContext.swift in Sources */,
 				AA3E84AC25BC917300C90C69 /* DecoderConfigurationError.swift in Sources */,
 				AA3E848525BC45B200C90C69 /* TopicCategory+CoreDataProperties.swift in Sources */,
+				AA3E84C725BDD45C00C90C69 /* StringError.swift in Sources */,
 				AA3E844525BA354800C90C69 /* PersistentContainer.swift in Sources */,
 				AAB8A96C259A93BA00A0E20E /* ExploreCoordinator.swift in Sources */,
 				AAB8A935259A4CC600A0E20E /* APIClientProtocol.swift in Sources */,
