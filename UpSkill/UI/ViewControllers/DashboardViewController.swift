@@ -6,6 +6,8 @@ class DashboardViewController: UIViewController {
 
     var coordinator: DashboardCoordinator?
 
+    @Service var userSession: UserSession
+
     private var sections = [TableViewSection]()
 
     init() {
@@ -28,9 +30,12 @@ class DashboardViewController: UIViewController {
     }
 
     private func configureSections() {
-        let profileSection = ProfileSection(name: "Robert Tanase", title: "Senior iOS Engineer")
-        tableView.register(ProfileCell.self, forCellReuseIdentifier: profileSection.cellIdentifier)
-        sections.append(profileSection)
+        if let user = userSession.user {
+            let userViewModel = UserViewModel(user: user)
+            let profileSection = ProfileSection(userViewModel: userViewModel)
+            tableView.register(ProfileCell.self, forCellReuseIdentifier: profileSection.cellIdentifier)
+            sections.append(profileSection)
+        }
 
 //        let quoteSection = QuoteSection()
 //        sections.append(quoteSection)

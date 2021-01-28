@@ -56,3 +56,18 @@ public class Atomic<Value> {
         value = wrappedValue
     }
 }
+
+@propertyWrapper
+public struct Service<ServiceType> {
+
+    private lazy var service: ServiceType = {
+        ServiceRegistry.shared.make(type: ServiceType.self)
+    }()
+
+    public var wrappedValue: ServiceType {
+        mutating get { service }
+        set { service = newValue }
+    }
+
+    public init() { }
+}

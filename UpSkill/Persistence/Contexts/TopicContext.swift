@@ -9,13 +9,14 @@ protocol TopicQueryable {
     func deleteAllTOpics()
 }
 
-class TopicContext: NSObject, TopicQueryable {
-    private let persistenceContainer: PersistentContainer
+class TopicContext: NSObject, Context, TopicQueryable {
+    internal let persistenceContainer: PersistentContainer
     private var fetchRequest: NSFetchRequest<Topic>
+    internal let entityName = "Topic"
 
     init(persistenceContainer: PersistentContainer = ServiceRegistry.shared.make(type: PersistentContainer.self)) {
         self.persistenceContainer = persistenceContainer
-        fetchRequest = NSFetchRequest(entityName: "Topic")
+        fetchRequest = NSFetchRequest(entityName: entityName)
     }
 
     func fetchTopic(identifier: String) -> Topic? {
@@ -43,13 +44,6 @@ class TopicContext: NSObject, TopicQueryable {
     }
 
     func deleteAllTOpics() {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Topic")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-        do {
-            try persistenceContainer.viewContext.execute(deleteRequest)
-        } catch let error {
-            print(error)
-        }
+        deleteObjectsInContext()
     }
 }

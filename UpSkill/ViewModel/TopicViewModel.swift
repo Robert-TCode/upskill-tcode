@@ -19,6 +19,5 @@ class TopicViewModel {
         return topic.description
     }
 
-    // Download an image and see if it updates in am uiimageview if it's binded
     var image: Box<UIImage?> = Box(nil)
 }

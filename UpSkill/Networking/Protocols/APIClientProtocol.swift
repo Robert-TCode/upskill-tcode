@@ -2,7 +2,7 @@
 
 import Foundation
 
-typealias APIClientProtocol = APIBase & APICategories
+typealias APIClientProtocol = APIBase & APIUser & APICategories
 
 protocol APIBase {
     var decoder: JSONDecoder { get }

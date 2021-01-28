@@ -7,7 +7,7 @@ protocol APICategories {
 }
 
 extension APICategories where Self: APIBase {
-    func updatePersistentContent() {
+    func updatePersistentCategories() {
         do {
             TopicCategoryContext().deleteAllCategories()
             try persistentContainer.viewContext.save()

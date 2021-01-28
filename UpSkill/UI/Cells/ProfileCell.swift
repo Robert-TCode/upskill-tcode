@@ -23,10 +23,10 @@ class ProfileCell: UITableViewCell {
 
     // MARK: Configuration
 
-    func configure(name: String, title: String) {
-        self.nameLabel.text = name
-        self.titleLabel.text = title
-        // TODO profileImageView.image = load an image
+    func configure(userViewModel: UserViewModel) {
+        self.nameLabel.text = userViewModel.fullName
+        self.titleLabel.text = userViewModel.expertiseLevel
+        self.profileImageView.setImage(url: userViewModel.profileImageUrl)
     }
 
     private func configureUI() {
@@ -40,7 +40,7 @@ class ProfileCell: UITableViewCell {
         NSLayoutConstraint.activate([profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
                                      profileImageView.leadingAnchor.constraint(equalTo: contentView.readableContentGuide.leadingAnchor),
                                      stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-                                     stackView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
+                                     stackView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 16),
                                      stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)])
     }
 
@@ -50,7 +50,7 @@ class ProfileCell: UITableViewCell {
         let view = UIImageView()
 
         view.backgroundColor = .gray
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
 
         let dimension: CGFloat = 50

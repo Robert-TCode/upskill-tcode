@@ -11,6 +11,22 @@ class MockAPIClient: APIClientProtocol {
         decoder.userInfo[CodingUserInfoKey.managedObjectContext] = self.persistentContainer.viewContext
     }
 
+    func getUser(completion: @escaping (Result<User, Error>) -> Void) {
+        guard let localData = self.readLocalFile(name: "user") else {
+            completion(.failure(StringError.fileNotFound("user")))
+            return
+        }
+
+        do {
+            let user = try decoder.decode(User.self, from: localData)
+            completion(.success(user))
+
+            updatePersistentUser()
+        } catch {
+            completion(.failure(StringError.parsingFailed(localData.prettyPrintedJSONString)))
+        }
+    }
+
     func getTopicCategories(completion: @escaping (Result<[TopicCategory], Error>) -> Void) {
         guard let localData = self.readLocalFile(name: "topics") else {
             completion(.failure(StringError.fileNotFound("topics")))
@@ -21,7 +37,7 @@ class MockAPIClient: APIClientProtocol {
             let topicCategories = try decoder.decode([TopicCategory].self, from: localData)
             completion(.success(topicCategories))
 
-            updatePersistentContent()
+            updatePersistentCategories()
         } catch {
             completion(.failure(StringError.parsingFailed(localData.prettyPrintedJSONString)))
         }

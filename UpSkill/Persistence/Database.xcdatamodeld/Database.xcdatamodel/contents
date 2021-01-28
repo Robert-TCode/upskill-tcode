@@ -18,8 +18,16 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="experiencePoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="level" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Topic" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="TopicCategory" positionX="-54" positionY="36" width="128" height="88"/>
+        <element name="User" positionX="-63" positionY="36" width="128" height="118"/>
     </elements>
 </model>

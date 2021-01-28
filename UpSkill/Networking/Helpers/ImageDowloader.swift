@@ -12,13 +12,20 @@ class ImageDownloader {
 
     init() { }
 
+    private static let cache = NSCache<NSString, UIImage>()
+
     static func downloadSwiftImage(completion: @escaping (UIImage?) -> Void) {
         downloadImage(from: "https://developer.apple.com/swift/images/swift-og.png", completion: completion)
     }
 
-    static func downloadImage(from url: String, completion: @escaping (UIImage?) -> Void) {
+    static func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
 
-        guard let url = URL(string: url) else {
+        if let image = cache.object(forKey: urlString as NSString) {
+            completion(image)
+            return
+        }
+
+        guard let url = URL(string: urlString) else {
             return
         }
 
@@ -31,7 +38,10 @@ class ImageDownloader {
             if let data = data {
                 let image = UIImage(data: data)
 
-                // todo cache image
+                if let validImage = image {
+                    cache.setObject(validImage, forKey: urlString as NSString)
+                }
+
                 completion(image)
             }
         }.resume()

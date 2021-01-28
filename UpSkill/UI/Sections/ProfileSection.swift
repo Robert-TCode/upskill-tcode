@@ -13,19 +13,17 @@ class ProfileSection: TableViewSection {
         return 1
     }
 
-    let name: String
-    let title: String
+    let userViewModel: UserViewModel
 
-    public init(name: String, title: String) {
-        self.name = name
-        self.title = title
+    public init(userViewModel: UserViewModel) {
+        self.userViewModel = userViewModel
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ProfileCell else {
             return UITableViewCell()
         }
-        cell.configure(name: name, title: title)
+        cell.configure(userViewModel: userViewModel)
         return cell
     }
 

@@ -7,6 +7,8 @@ class AppCoordinator: Coordinator {
     let window: UIWindow
     let apiClient: APIClientProtocol
 
+    @Service var userSession: UserSession
+
     var navigationController: UINavigationController
     
     init(window: UIWindow, apiClient: APIClientProtocol) {
@@ -18,8 +20,14 @@ class AppCoordinator: Coordinator {
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-    
+
+        getUser()
+
         let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, apiClient: apiClient)
         tabBarCoordinator.start()
+    }
+
+    private func getUser() {
+        apiClient.getUser { _ in }
     }
 }

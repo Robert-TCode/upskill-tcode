@@ -11,12 +11,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        registerPersistentContainer()
-
-//        deleteDatabase()
+        registerServices()
 
         coordinator = AppCoordinator(window: window!, apiClient: createAPIClient())
         coordinator?.start()
+    }
+
+    private func registerServices() {
+        let persistentContainer = getPersistentContainer()
+        ServiceRegistry.shared.register(service: persistentContainer, as: PersistentContainer.self)
+
+        let currentUser = UserSession()
+        ServiceRegistry.shared.register(service: currentUser, as: UserSession.self)
     }
 
     private func deleteDatabase() {
@@ -25,11 +31,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let categoryContext = TopicCategoryContext()
         categoryContext.deleteAllCategories()
-    }
 
-    private func registerPersistentContainer() {
-        let persistentContainer = getPersistentContainer()
-        ServiceRegistry.shared.register(service: persistentContainer, as: PersistentContainer.self)
+        let userContext = UserContext()
+        userContext.deleteUser()
     }
 
     private func createAPIClient() -> APIClientProtocol {
