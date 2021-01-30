@@ -35,6 +35,12 @@ extension UIView {
         self.addSubview(subview)
     }
 
+    func addSubviewsWithoutConstraints(_ subviews: UIView ...) {
+        subviews.forEach { subview in
+            addSubviewWithoutConstraints(subview)
+        }
+    }
+
     func constraint(toSize size: CGSize) {
         self.heightAnchor.constraint(equalToConstant: size.height).isActive = true
         self.widthAnchor.constraint(equalToConstant: size.width).isActive = true
@@ -42,5 +48,6 @@ extension UIView {
 
     func setCornerRadius(to radius: CGFloat) {
         self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
     }
 }

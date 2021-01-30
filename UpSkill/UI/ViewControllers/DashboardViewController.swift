@@ -48,12 +48,6 @@ class DashboardViewController: UIViewController {
     }
 
     private func configureSubviews() {
-        let titleLabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Welcome, TCode\nHope you're killing it today!"
-        titleLabel.numberOfLines = 0
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
-
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),

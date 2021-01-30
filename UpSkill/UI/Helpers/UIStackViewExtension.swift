@@ -11,3 +11,16 @@ extension UIStackView {
         }
     }
 }
+
+func makeStackView(axis: NSLayoutConstraint.Axis = .vertical,
+                   alignment: UIStackView.Alignment = .fill,
+                   distribution: UIStackView.Distribution = .fill,
+                   spacing: CGFloat = 8) -> UIStackView {
+    let stackView = UIStackView()
+    stackView.axis = axis
+    stackView.alignment = alignment
+    stackView.distribution = distribution
+    stackView.spacing = spacing
+
+    return stackView
+}

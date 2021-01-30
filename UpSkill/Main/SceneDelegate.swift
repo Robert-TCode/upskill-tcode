@@ -37,11 +37,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func createAPIClient() -> APIClientProtocol {
-        let persistentContainer: PersistentContainer = ServiceRegistry.shared.make(type: PersistentContainer.self)
-        let managedObjectContext = persistentContainer.viewContext
-        let decoder = JSONDecoder()
-        decoder.userInfo[CodingUserInfoKey.managedObjectContext] = managedObjectContext
-
         let apiClient: APIClientProtocol = MockAPIClient()
         return apiClient
     }
